@@ -78,7 +78,7 @@ restore() {
 
 font() {
     echo "PLEASE BEFORE INSTALLATION QUIT EVERY TEXT EDITOR, YOU HAVE 5 SECONDS"
-    sleep 5
+    sleep 2
     curl -s 'https://api.github.com/repos/be5invis/Iosevka/releases/latest' | jq -r ".assets[] | .browser_download_url" | grep PkgTTC-Iosevka | xargs -n 1 curl -L -O --fail --silent --show-error
     echo "MAKE SURE THAT YOU HAVE NOT MORE DOWNLOADS OF THE FONT IN THE CURRENT DIRECTORY"
     mkdir IOSEVKA
